@@ -21,7 +21,7 @@ public class OrderService {
         // 1.查询订单
         Order order = orderMapper.findById(orderId);
 
-        String url = "http://user01/user/"+order.getUserId();
+        String url = "http://userservice/user/"+order.getUserId();
 
         User forObject = restTemplate.getForObject(url, User.class);
 

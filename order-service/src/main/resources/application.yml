@@ -2,12 +2,15 @@ server:
   port: 8080
 spring:
   application:
-    name: order01
+    name: orderservice
   datasource:
     url: jdbc:mysql://localhost:3306/cloud_order?useSSL=false
     username: root
     password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
+  cloud:
+    nacos:
+      server-addr: localhost:8848
 mybatis:
   type-aliases-package: cn.itcast.user.pojo
   configuration:
@@ -17,7 +20,14 @@ logging:
     cn.itcast: debug
   pattern:
     dateformat: MM-dd HH:mm:ss:SSS
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:10086/eureka/
+
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://localhost:10086/eureka/
+
+ribbon:
+  eager-load:
+    clients: userservice
+    enabled: true
+#    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
