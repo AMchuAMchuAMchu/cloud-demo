@@ -12,9 +12,9 @@ spring:
     nacos:
       server-addr: localhost:8848
       discovery:
-        cluster-name: SH
-        ephemeral: false
-        namespace: chelly
+        cluster-name: HZ
+#        ephemeral: false
+#        namespace: chelly
 mybatis:
   type-aliases-package: cn.itcast.user.pojo
   configuration:
