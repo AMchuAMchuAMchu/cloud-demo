@@ -21,8 +21,8 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @Value("${pattern.dateformat}")
-    private String dateformat;
+//    @Value("${pattern.dateformat}")
+//    private String dateformat;
 
     @Autowired
     private NacosConfigTest01 nacosConfigTest01;
@@ -33,7 +33,9 @@ public class UserController {
         System.out.println(" >>> ");
         System.out.println(" >>> ");
 //        return DateTimeFormatter.ofPattern(dateformat).format(LocalDateTime.now());
-        return DateTimeFormatter.ofPattern(nacosConfigTest01.getDateformat()).format(LocalDateTime.now());
+//        return DateTimeFormatter.ofPattern(nacosConfigTest01.getDateformat()).format(LocalDateTime.now());
+        return DateTimeFormatter.ofPattern(nacosConfigTest01.getDateformat()).format(LocalDateTime.now())
+                +"||"+nacosConfigTest01.getDatabase();
     }
 
     /**

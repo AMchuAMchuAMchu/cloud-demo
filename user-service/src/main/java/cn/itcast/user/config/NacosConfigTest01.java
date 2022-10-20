@@ -19,4 +19,6 @@ public class NacosConfigTest01 {
 
     private String dateformat;
 
+    private String database;
+
 }
