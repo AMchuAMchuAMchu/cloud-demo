@@ -34,7 +34,7 @@ public class UserController {
         System.out.println(" >>> ");
 //        return DateTimeFormatter.ofPattern(dateformat).format(LocalDateTime.now());
 //        return DateTimeFormatter.ofPattern(nacosConfigTest01.getDateformat()).format(LocalDateTime.now());
-        return DateTimeFormatter.ofPattern(nacosConfigTest01.getDateformat()).format(LocalDateTime.now())
+        return DateTimeFormatter.ofPattern(nacosConfigTest01.getDateformat()!=null?nacosConfigTest01.getDateformat():"yyyy-MM-dd hh:mm:ss").format(LocalDateTime.now())
                 +"||"+nacosConfigTest01.getDatabase();
     }
 
