@@ -38,3 +38,12 @@ userservice:
   ribbon:
     NFLoadBalancerRuleClassName: com.alibaba.cloud.nacos.ribbon.NacosRule # 负载均衡规则
 
+feign:
+  client:
+    config:
+      default:
+        LoggerLevel: BASIC
+  httpclient:
+    enabled: true
+    max-connections: 200
+    max-connections-per-route: 50
