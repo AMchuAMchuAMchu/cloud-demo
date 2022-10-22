@@ -60,6 +60,12 @@
             <artifactId>feign-httpclient</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>cn.itcast.demo</groupId>
+            <artifactId>feign_api</artifactId>
+            <version>1.0</version>
+        </dependency>
+
 
 
     </dependencies>
